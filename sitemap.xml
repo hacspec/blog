@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hacspec.org/blog/tags/admin/</loc>
+    <loc>https://hacspec.github.io/blog/tags/admin/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/archives/</loc>
+    <loc>https://hacspec.github.io/blog/archives/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/categories/</loc>
+    <loc>https://hacspec.github.io/blog/categories/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/</loc>
+    <loc>https://hacspec.github.io/blog/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/posts/hello-world/</loc>
+    <loc>https://hacspec.github.io/blog/posts/hello-world/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/posts/</loc>
+    <loc>https://hacspec.github.io/blog/posts/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/search/</loc>
+    <loc>https://hacspec.github.io/blog/search/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/series/</loc>
+    <loc>https://hacspec.github.io/blog/series/</loc>
   </url><url>
-    <loc>https://hacspec.org/blog/tags/</loc>
+    <loc>https://hacspec.github.io/blog/tags/</loc>
   </url>
 </urlset>

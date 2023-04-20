@@ -1,4 +1,4 @@
-baseURL: "https://hacspec.org/blog/"
+baseURL: "https://hacspec.github.io/blog/"
 title: hacspec
 paginate: 5
 theme: PaperMod

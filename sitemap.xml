@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hacspec.org/blog/tags/admin/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/archives/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/categories/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/posts/hello-world/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/posts/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/search/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/series/</loc>
+  </url><url>
+    <loc>https://hacspec.org/blog/tags/</loc>
+  </url>
+</urlset>

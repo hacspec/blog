@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hacspec</title>
+    <link>https://hacspec.org/blog/</link>
+    <description>Recent content on hacspec</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://hacspec.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archive</title>
+      <link>https://hacspec.org/blog/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.org/blog/archives/</guid>
+      <description>archives</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://hacspec.org/blog/posts/hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.org/blog/posts/hello-world/</guid>
+      <description>Hello hacspec blog</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://hacspec.org/blog/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.org/blog/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

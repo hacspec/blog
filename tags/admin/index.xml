@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>admin on hacspec</title>
     <link>https://hacspec.github.io/blog/tags/admin/</link>
     <description>Recent content in admin on hacspec</description>
+    <image>
+      <title>hacspec</title>
+      <url>https://hacspec.github.io/blog/papermod-cover.png</url>
+      <link>https://hacspec.github.io/blog/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://hacspec.github.io/blog/tags/admin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
@@ -11,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hacspec.github.io/blog/posts/hello-world/</guid>
-      <description>Hello hacspec blog</description>
+      <description>First post</description>
     </item>
     
   </channel>

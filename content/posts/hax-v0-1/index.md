@@ -4,16 +4,16 @@ title: "hax v0.1 🎂"
 date: "2023-19-10"
 description: "We are excited to announce the first release of hax"
 tags: ["release", "announcement"]
-ShowToc: false
+ShowToc: true
 ShowBreadCrumbs: false
 ---
 
 This has been in the making for a while now.
 But we are finally happy to announce the first release of `hax`.
 It is still early days and we only tagged v0.1.
-But a ton of work has been gone into this release.
+But a ton of work has gone into this release.
 
-> What is hax?
+> Wait, what is hax?
 
 Let's start at the beginning.
 We started hacspec (high assurance crypto specifications), a language for specifying
@@ -25,7 +25,7 @@ the project outgrew the name.
 Here comes **hax**.
 hax is a tool for high assurance translations that translates a large subset of
 Rust into formal languages such as [F\*](https://www.fstar-lang.org/) or [Coq](https://coq.inria.fr/).
-This extends the scope of the project, that was previously a DSL embedded in Rust,
+This extends the scope of the project, which was previously a DSL embedded in Rust,
 to a usable tool for verifying Rust programs.
 
 > So what is hacspec now?
@@ -33,52 +33,48 @@ to a usable tool for verifying Rust programs.
 hacspec is the functional subset of Rust that can be used, together with a hacspec
 standard library, to write succinct, executable, and verifiable specifications in
 Rust.
-
-# Overview
-
-TODO: Add links
-
-There are a number of Rust verification projects out there.
-While most of them try to precisely model a large part of the Rust language,
-hax aims to be a usable tool that captures a large subset of Rust without trying
-to capture or model everything.
-We believe that it is more important to have a usable tool that ingests large
-Rust crates to show properties on certain parts of the code, instead of modelling
-the entire Rust language.
-
-## Architecture
-
-TODO: add picture and description
+These specifications can be translated into formal languages with hax.
 
 ![](hax-high-level.png)
 
+# hax
+
+There are a number of Rust verification projects out there, for example [Kani], [Crux-Mir], or [MIRAI].
+While most of them try to precisely model a large part of the Rust language,
+hax aims to be a usable tool that captures a large subset of Rust without trying
+to capture or model everything.
+We believe that it is more important in practice to have a usable tool that ingests large
+Rust crates to show properties on certain parts of the code, instead of modelling
+the entire Rust language.
+
 hax has two parts: the exporter and the engine.
 
-### The exporter
+## The exporter
+
 When hax is invoked on a Rust crate,
 the exporter hooks into the Rust compiler.
-Compiling a program, 
-Rust transformes the user source code 
+Compiling a program,
+Rust transformes the user source code
 to various internal representations in an optimized fashion
 (essentially [HIR], [THIR] and [MIR], illustrated in the diagram below).
 While this is great within the compiler,
-those representations are not friendly to external tool consumtions.
+those representations are not friendly to external tool consumption.
 
-hax's exporter is a 
+The hax exporter is a
 [Rust driver](https://rustc-dev-guide.rust-lang.org/rustc-driver.html)
 that provides a bridge
-from those unstable internal representations 
+from those unstable internal representations
 to fixed and easy-to-consume ASTs[^1] (abstract syntax trees).
 The `JSON` node on the diagram below represents those ASTs.
 
 ![](hax-low-level.png)
 
-hax's exporter is not opinionated toward the hax project: 
+The hax exporter is not opinionated toward the hax project:
 it can be used as a frontend to the Rust compiler in other projects.
 For example, the [Aeneas](https://github.com/AeneasVerif/aeneas) toolchain is
-[already moving toward](https://github.com/AeneasVerif/aeneas/pull/35) our exporter!
+[already moving toward](https://github.com/AeneasVerif/aeneas/pull/35) our exporter.
 
-### The engine
+## The engine
 
 The magic of hax really happens in the engine, written in OCaml.
 It directly consumes[^2] the output of the exporter, that is,
@@ -87,21 +83,22 @@ the ASTs exported for your crate of choice.
 Upon the backend choice (for instance: shall we extract to F\* or to
 Coq?), the engine proceeds to a sequence of typed[^3] program
 transformations, eventually landing into the sublanguage supported by
-the targeted language (e.g. F\*).
+the targeted language, e.g. F\*.
 
-The various program transformations are called *phases*. We have a
+The various program transformations are called _phases_. We have a
 dozen of them:
- - transforming and functionalizing `for` loops;
- - functionalizing local mutation;
- - rewrite functions with mutable references as inputs into state-passing;
- - and many more!
+
+- transforming and functionalizing `for` loops;
+- functionalizing local mutation;
+- rewrite functions with mutable references as inputs into state-passing;
+- and many more!
 
 Those phases are statically typed: for instance, making `for` loops
 functional is not possible on an AST that still contains local
 mutation. Such constraints are ensured statically, reducing
-opportunities for bugs. 
+opportunities for bugs.
 
-This typed phase design allow us to target heterogeneous languages:
+This typed phase design allows us to target heterogeneous languages:
 for instance F\* and [EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt).
 
 # Usage
@@ -117,7 +114,7 @@ After installing it you can call it from any Rust crate.
 cargo hax into fstar
 ```
 
-will extract the crate to F\*.
+This will extract the crate to F\*.
 Similarly, `cargo hax into coq` will extract the crate to Coq.
 
 For more options use
@@ -129,7 +126,7 @@ cargo hax into --help
 # Example
 
 We walk through a sample usage of hax based on an example.
-The example can be found in the [git repository](https://github.com/hacspec/hacspec-v2/tree/main/examples/lob).
+The example can be found in the [git repository](https://github.com/hacspec/hax/tree/main/examples/lob).
 
 Go to the `proofs/fstar/extraction` directory and run `make`.
 This will first call
@@ -139,9 +136,15 @@ cargo hax into -i '-** +**::process_order' fstar
 ```
 
 in order to extract the `process_order` order function to F\*.
-And then it calls F\* on the generated output.
+This demonstrates one particularly useful feature in hax, which allows extracting
+only a small portion or single function from a much larger crate.
+The argument `-i '-** +**::process_order'` tells hax to include the `process_order`
+function in any module and exclude (`-**`) everything else.
+In addition to the function itself, hax extracts all the required dependencies within
+the crate as well.
 
-**Rust**
+<details>
+<summary>Rust</summary>
 
 ```rust
 fn process_order<T>(mut order: Order, other_side: &mut BinaryHeap<T>) -> (Vec<Match>, Option<Order>)
@@ -167,9 +170,12 @@ where
 }
 ```
 
-**F\***
+</details>
 
-```fstar
+<details>
+<summary>F*</summary>
+
+```ocaml
 match
   Core.Option.impl__and_then (Alloc.Collections.Binary_heap.impl_10__peek other_side
       <:
@@ -214,7 +220,12 @@ with
   done, matches, order, other_side
 ```
 
-This examples proves two properties on the Rust code.
+</details>
+
+<pre></pre>
+
+Then the makefile calls F\* on the generated output.
+The successful typechecking in F* proves two properties on the Rust code.
 
 First it shows that the lines with
 
@@ -223,6 +234,8 @@ order.quantity -= m.quantity;
 ```
 
 do not underflow.
+
+XXX: What's the condition checked in F* here?
 
 Second, it shows that
 
@@ -243,11 +256,15 @@ We invite everyone to contribute to the project with new backends, contributing 
 - [Git Repository]
 
 [hacs workshop]: https://www.hacs-workshop.org/
-[git repository]: https://github.com/hacspec/hacspec-v2
+[git repository]: https://github.com/hacspec/hax
 [zulip]: https://hacspec.zulipchat.com/
 [MIR]: https://rustc-dev-guide.rust-lang.org/mir/index.html
 [THIR]: https://rustc-dev-guide.rust-lang.org/thir.html
 [HIR]: https://rustc-dev-guide.rust-lang.org/hir.html
+[kani]: https://github.com/model-checking/kani
+[crux-mir]: https://github.com/GaloisInc/crucible/tree/master/crux-mir
+[mirai]: https://github.com/facebookexperimental/MIRAI
+
 [^1]: Rust's internal ASTs are very optimized in memory and require constantly to lookup things interactively with the Rust compiler. Instead, our ASTs are indirection-free trees packing as much informations as possible (e.g. types, attributes, spans...), ready for direct consumption.
 [^2]: The exporter expose big ASTs as JSON. The Rust type definitions of those ASTs are automatically converted into OCaml type definition along with JSON serializer and deserializers, using [JSON Schemas](https://json-schema.org/).
 [^3]: The internal AST used by the hax engine is [functorized](https://ocaml.org/docs/functors). This enables AST transformations to be strongly typed.

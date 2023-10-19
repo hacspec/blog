@@ -49,7 +49,7 @@ the entire Rust language.
 
 hax has two parts: the exporter and the engine.
 
-## The exporter
+## The Exporter
 
 When hax is invoked on a Rust crate,
 the exporter hooks into the Rust compiler.
@@ -74,7 +74,7 @@ it can be used as a frontend to the Rust compiler in other projects.
 For example, the [Aeneas](https://github.com/AeneasVerif/aeneas) toolchain is
 [already moving toward](https://github.com/AeneasVerif/aeneas/pull/35) our exporter.
 
-## The engine
+## The Engine
 
 The magic of hax really happens in the engine, written in OCaml.
 It directly consumes[^2] the output of the exporter, that is,
@@ -250,7 +250,7 @@ never panics, i.e. the `pop` always returns `Some` value and thus never panics.
 hax is still under heavy development and there are many features we want to add, and many bugs to squash.
 We invite everyone to contribute to the project with new backends, contributing to the hax frontend or backend, or provide examples to exercise the tool.
 
-## Resources
+# Resources
 
 - [Zulip]
 - [Git Repository]

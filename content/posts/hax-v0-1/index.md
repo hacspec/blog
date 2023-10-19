@@ -1,6 +1,6 @@
 ---
 author: "Franziskus Kiefer & Lucas Franceschino"
-title: "hax v0.1 🎂"
+title: "Introducing hax 🎂"
 date: "2023-19-10"
 description: "We are excited to announce the first release of hax"
 tags: ["release", "announcement"]
@@ -228,7 +228,8 @@ Then the makefile calls F\* on the generated output.
 The successful typechecking in F\* proves two properties on the Rust code.
 
 ## Non-panicking subtraction
-First it shows that the lines with
+
+First, it shows that the lines with
 
 ```rust
 order.quantity -= m.quantity;
@@ -238,10 +239,10 @@ do not underflow.
 
 Concretely, in Rust, the subtraction on `u64` integers is a partial
 operation: the subtraction of `x` and `y` (`x - y`) is defined only
-when `x` is greater or equal to `y`.
+when `x` is greater or equal to `y` such that `x - y >= 0`.
 
 Such a requirement cannot be expressed as a Rust type, thus Rust's
-substraction just panics (in debug mode) when it is called with bad
+subtraction panics (in debug mode) when it is called with bad
 inputs.
 
 In contrast, F\* is ideal to express such types! We model Rust's
@@ -255,14 +256,18 @@ This strong signature implies a _proof obligation_: whenever this F\*
 subtraction is used, F\* won't typecheck unless it finds a proof that
 `x >=. y` holds.
 
-## Non-panicking `unwrap`
+Therefore, typechecking in F\* implies that `order.quantity -= m.quantity;` never
+underflows.
+
+## Non-panicking unwrap
+
 Second, it shows that
 
 ```rust
 other_side.pop().unwrap()
 ```
 
-never panics, i.e. the `pop` always returns `Some` value and thus never panics.
+never panics, i.e. the `pop` always returns `Some` value and thus `unwrap` never panics.
 
 Similarly to subtraction, in F\*, using `unwrap` requires a proof that
 the option being unwrapped is not `None`.

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hacspec.github.io/blog/tags/admin/</loc>
+    <loc>https://hacspec.github.io/blog/tags/announcement/</loc>
   </url><url>
     <loc>https://hacspec.github.io/blog/archives/</loc>
   </url><url>
@@ -10,9 +10,11 @@
   </url><url>
     <loc>https://hacspec.github.io/blog/</loc>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/hello-world/</loc>
+    <loc>https://hacspec.github.io/blog/posts/hax-v0-1/</loc>
   </url><url>
     <loc>https://hacspec.github.io/blog/posts/</loc>
+  </url><url>
+    <loc>https://hacspec.github.io/blog/tags/release/</loc>
   </url><url>
     <loc>https://hacspec.github.io/blog/search/</loc>
   </url><url>

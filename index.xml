@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hacspec</title>
+    <title>hax</title>
     <link>https://hacspec.github.io/blog/</link>
-    <description>Recent content on hacspec</description>
+    <description>Recent content on hax</description>
     <image>
-      <title>hacspec</title>
+      <title>hax</title>
       <url>https://hacspec.github.io/blog/papermod-cover.png</url>
       <link>https://hacspec.github.io/blog/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://hacspec.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Hello World</title>
-      <link>https://hacspec.github.io/blog/posts/hello-world/</link>
+      <title>Introducing hax 🎂</title>
+      <link>https://hacspec.github.io/blog/posts/hax-v0-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hacspec.github.io/blog/posts/hello-world/</guid>
-      <description>First post</description>
+      <guid>https://hacspec.github.io/blog/posts/hax-v0-1/</guid>
+      <description>We are excited to announce the first release of hax</description>
     </item>
     
     

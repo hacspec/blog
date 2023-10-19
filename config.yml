@@ -1,5 +1,5 @@
 baseURL: "https://hacspec.github.io/blog/"
-title: hacspec
+title: hax
 paginate: 5
 theme: PaperMod
 
@@ -42,7 +42,7 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "hacspec blog - https://github.com/hacspec/blog"
+    description: "hax & hacspec blog - https://github.com/hacspec/blog"
     author: hacspec authors
     # author: ["Me", "You"] # multiple authors
 
@@ -74,13 +74,13 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "hacspec"
+        Title: "hax & hacspec"
         Content: >
-            A specification language for crypto primitives and more in Rust.
+            A Rust verification tool
 
     socialIcons:
         - name: github
-          url: "https://github.com/hacspec/hacspec"
+          url: "https://github.com/hacspec/hax"
         - name: email
           url: "mailto:hacspec@cryspen.com"
 

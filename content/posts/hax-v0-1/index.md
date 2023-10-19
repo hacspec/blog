@@ -24,7 +24,7 @@ the project outgrew the name.
 
 Here comes **hax**.
 hax is a tool for high assurance translations that translates a large subset of
-Rust into formal languages such as F\* or Coq.
+Rust into formal languages such as [F\*](https://www.fstar-lang.org/) or [Coq](https://coq.inria.fr/).
 This extends the scope of the project, that was previously a DSL embedded in Rust,
 to a usable tool for verifying Rust programs.
 
@@ -51,13 +51,65 @@ the entire Rust language.
 TODO: add picture and description
 
 ![](hax-high-level.png)
+
+hax has two parts: the exporter and the engine.
+
+### The exporter
+When hax is invoked on a Rust crate,
+the exporter hooks into the Rust compiler.
+Compiling a program, 
+Rust transformes the user source code 
+to various internal representations in an optimized fashion
+(essentially [HIR], [THIR] and [MIR], illustrated in the diagram below).
+While this is great within the compiler,
+those representations are not friendly to external tool consumtions.
+
+hax's exporter is a 
+[Rust driver](https://rustc-dev-guide.rust-lang.org/rustc-driver.html)
+that provides a bridge
+from those unstable internal representations 
+to fixed and easy-to-consume ASTs[^1] (abstract syntax trees).
+The `JSON` node on the diagram below represents those ASTs.
+
 ![](hax-low-level.png)
+
+hax's exporter is not opinionated toward the hax project: 
+it can be used as a frontend to the Rust compiler in other projects.
+For example, the [Aeneas](https://github.com/AeneasVerif/aeneas) toolchain is
+[already moving toward](https://github.com/AeneasVerif/aeneas/pull/35) our exporter!
+
+### The engine
+
+The magic of hax really happens in the engine, written in OCaml.
+It directly consumes[^2] the output of the exporter, that is,
+the ASTs exported for your crate of choice.
+
+Upon the backend choice (for instance: shall we extract to F\* or to
+Coq?), the engine proceeds to a sequence of typed[^3] program
+transformations, eventually landing into the sublanguage supported by
+the targeted language (e.g. F\*).
+
+The various program transformations are called *phases*. We have a
+dozen of them:
+ - transforming and functionalizing `for` loops;
+ - functionalizing local mutation;
+ - rewrite functions with mutable references as inputs into state-passing;
+ - and many more!
+
+Those phases are statically typed: for instance, making `for` loops
+functional is not possible on an AST that still contains local
+mutation. Such constraints are ensured statically, reducing
+opportunities for bugs. 
+
+This typed phase design allow us to target heterogeneous languages:
+for instance F\* and [EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt).
 
 # Usage
 
 hax is still heavily under development.
 It is therefore recommended to install it straight from the [git repository]
-(see the Installation section in the readme).
+(see the [Installation section](https://github.com/hacspec/hax#installation)
+in the readme).
 
 After installing it you can call it from any Rust crate.
 
@@ -193,3 +245,9 @@ We invite everyone to contribute to the project with new backends, contributing 
 [hacs workshop]: https://www.hacs-workshop.org/
 [git repository]: https://github.com/hacspec/hacspec-v2
 [zulip]: https://hacspec.zulipchat.com/
+[MIR]: https://rustc-dev-guide.rust-lang.org/mir/index.html
+[THIR]: https://rustc-dev-guide.rust-lang.org/thir.html
+[HIR]: https://rustc-dev-guide.rust-lang.org/hir.html
+[^1]: Rust's internal ASTs are very optimized in memory and require constantly to lookup things interactively with the Rust compiler. Instead, our ASTs are indirection-free trees packing as much informations as possible (e.g. types, attributes, spans...), ready for direct consumption.
+[^2]: The exporter expose big ASTs as JSON. The Rust type definitions of those ASTs are automatically converted into OCaml type definition along with JSON serializer and deserializers, using [JSON Schemas](https://json-schema.org/).
+[^3]: The internal AST used by the hax engine is [functorized](https://ocaml.org/docs/functors). This enables AST transformations to be strongly typed.

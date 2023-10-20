@@ -149,7 +149,7 @@ cargo hax into --help
 # Example
 
 We walk through a sample usage of hax based on an example.
-The example can be found in the [git repository](https://github.com/hacspec/hax/tree/main/examples/lob).
+The example can be found in the [git repository](https://github.com/hacspec/hax/tree/main/examples/limited-order-book).
 
 Go to the `proofs/fstar/extraction` directory and run `make`.
 This will first call

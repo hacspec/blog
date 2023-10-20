@@ -68,7 +68,7 @@ in the readme).</p><p>After installing it you can call it from any Rust crate.</
 </span></span></code></pre></div><p>This will extract the crate to F*.
 Similarly, <code>cargo hax into coq</code> will extract the crate to Coq.</p><p>For more options use</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cargo hax into --help
 </span></span></code></pre></div><h1 id=example>Example<a hidden class=anchor aria-hidden=true href=#example>#</a></h1><p>We walk through a sample usage of hax based on an example.
-The example can be found in the <a href=https://github.com/hacspec/hax/tree/main/examples/lob>git repository</a>.</p><p>Go to the <code>proofs/fstar/extraction</code> directory and run <code>make</code>.
+The example can be found in the <a href=https://github.com/hacspec/hax/tree/main/examples/limited-order-book>git repository</a>.</p><p>Go to the <code>proofs/fstar/extraction</code> directory and run <code>make</code>.
 This will first call</p><pre tabindex=0><code>cargo hax into -i &#39;-** +**::process_order&#39; fstar
 </code></pre><p>in order to extract the <code>process_order</code> order function to F*.
 This demonstrates one particularly useful feature in hax, which allows extracting

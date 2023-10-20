@@ -15,37 +15,49 @@ But a ton of work has gone into this release.
 
 > Wait, what is hax?
 
-Let's start at the beginning.
-We started hacspec (high assurance crypto specifications), a language for specifying
-cryptographic primitives as the basis for formal verification, in early 2018 at
-the [HACS workshop].
-After two [iterations](https://github.com/hacs-workshop/hacspec) on [hacspec](https://github.com/hacspec/hacspec)
-the project outgrew the name.
+Let's start at the beginning. A group of us started hacspec (high
+assurance crypto specifications), a language for specifying
+cryptographic primitives as the basis for formal verification, in
+early 2018 at the [HACS workshop].  After two
+[iterations](https://github.com/hacs-workshop/hacspec) on
+[hacspec](https://github.com/hacspec/hacspec) the project
+outgrew the name and the initial crypto-oriented scope.
 
 Here comes **hax**.
-hax is a tool for high assurance translations that translates a large subset of
-Rust into formal languages such as [F\*](https://www.fstar-lang.org/) or [Coq](https://coq.inria.fr/).
-This extends the scope of the project, which was previously a DSL embedded in Rust,
-to a usable tool for verifying Rust programs.
+hax is a tool for high assurance translations that translates a large-ish subset of
+safe Rust into the formal languages accepted by proof assistants such as
+[F\*](https://www.fstar-lang.org/) or [Coq](https://coq.inria.fr/).
+Backends for other provers like [EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt) are under construction. 
+
+This is the result of joint work between the Prosecco team at
+[Inria](https://prosecco.inria.fr/), [Cryspen](https://cryspen.com/),
+and Prof. Spitters' group at [Aarhus University](https://users-cs.au.dk/spitters/).
+
+The key design principle behind hax is hat we want to build a usable tool
+for verifying Rust programs without forcing the user to commit to a
+specific proof environment. In the future, we hope multiple tool
+developers will find it fruitful to build backends for hax.
 
 > So what is hacspec now?
 
-hacspec is the functional subset of Rust that can be used, together with a hacspec
+hacspec is a purely functional subset of Rust that can be used, together with a hacspec
 standard library, to write succinct, executable, and verifiable specifications in
-Rust.
-These specifications can be translated into formal languages with hax.
+Rust. These specifications can be translated into formal languages with hax.
 
 ![](hax-high-level.png)
 
 # hax
 
-There are a number of Rust verification projects out there, for example [Kani], [Crux-Mir], or [MIRAI].
-While most of them try to precisely model a large part of the Rust language,
-hax aims to be a usable tool that captures a large subset of Rust without trying
-to capture or model everything.
-We believe that it is more important in practice to have a usable tool that ingests large
-Rust crates to show properties on certain parts of the code, instead of modelling
-the entire Rust language.
+There are a number of Rust verification projects out there. See,
+for example, [Rust
+Verify](https://sites.google.com/view/rustverify2023) and the [Rust Formal Methods Interest Group](https://rust-formal-methods.github.io/).
+While most existing tools try to precisely model the most complex bits the Rust language,
+hax aims to be a usable and pragmatic tool that can analyze the kind of
+code Rust developer write on a daily basis, while abstracting away
+or ignoring Rust features it does not support. 
+We believe that it is important in practice to have a usable tool that
+can ingest large Rust crates to show properties on certain parts of
+the code, instead of getting stuck on hard corner cases.
 
 hax has two parts: the exporter and the engine.
 
@@ -71,8 +83,10 @@ The `JSON` node on the diagram below represents those ASTs.
 
 The hax exporter is not opinionated toward the hax project:
 it can be used as a frontend to the Rust compiler in other projects.
-For example, the [Aeneas](https://github.com/AeneasVerif/aeneas) toolchain is
-[already moving toward](https://github.com/AeneasVerif/aeneas/pull/35) our exporter.
+For example, we are working with the
+[Aeneas](https://github.com/AeneasVerif/aeneas) project
+towads using sharing the exporter code between 
+[the two tools](https://github.com/AeneasVerif/aeneas/pull/35).
 
 ## The Engine
 
@@ -90,7 +104,8 @@ dozen of them:
 
 - transforming and functionalizing `for` loops;
 - functionalizing local mutation;
-- rewrite functions with mutable references as inputs into state-passing;
+- rewrite functions with mutable references as inputs into
+  state-passing code;
 - and many more!
 
 Those phases are statically typed: for instance, making `for` loops
@@ -99,7 +114,9 @@ mutation. Such constraints are ensured statically, reducing
 opportunities for bugs.
 
 This typed phase design allows us to target heterogeneous languages:
-for instance F\* and [EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt).
+for instance, an upcoming backend targets
+[EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt) which uses an
+imperative style quite different from F\* and Coq.
 
 # Usage
 
@@ -274,8 +291,17 @@ the option being unwrapped is not `None`.
 
 # Call to Action
 
-hax is still under heavy development and there are many features we want to add, and many bugs to squash.
-We invite everyone to contribute to the project with new backends, contributing to the hax frontend or backend, or provide examples to exercise the tool.
+hax is still under heavy development and there are many features we
+want to add, and many bugs to squash.  We invite everyone to
+contribute to the project with new backends, contributing to the hax
+frontend or backend, or provide examples to exercise the tool.
+
+The F\* backend is currently being developed by the Inria Prosecco
+team, the Coq backend by the Aarhus team, and an EasyCrypt backend is
+in the works by the EasyCrypt team. We are also working with the
+[Aeneas](https://github.com/AeneasVerif/aeneas) project to allow
+better interoperability between their sophisticated stateful Rust
+verification toolchain and hax.
 
 # Resources
 

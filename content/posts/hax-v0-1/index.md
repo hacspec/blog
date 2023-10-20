@@ -1,7 +1,7 @@
 ---
 author: "Franziskus Kiefer & Lucas Franceschino"
 title: "Introducing hax 🎂"
-date: "2023-19-10"
+date: "2023-20-10"
 description: "We are excited to announce the first release of hax"
 tags: ["release", "announcement"]
 ShowToc: true
@@ -15,10 +15,11 @@ But a ton of work has gone into this release.
 
 > Wait, what is hax?
 
-Let's start at the beginning. A group of us started hacspec (high
-assurance crypto specifications), a language for specifying
-cryptographic primitives as the basis for formal verification, in
-early 2018 at the [HACS workshop].  After two
+Let's start at the beginning.
+A group of us started hacspec (high assurance crypto specifications),
+a language for specifying cryptographic primitives as the basis for formal verification, in
+early 2018 at the [HACS workshop].
+After two
 [iterations](https://github.com/hacs-workshop/hacspec) on
 [hacspec](https://github.com/hacspec/hacspec) the project
 outgrew the name and the initial crypto-oriented scope.
@@ -42,19 +43,21 @@ developers will find it fruitful to build backends for hax.
 
 hacspec is a purely functional subset of Rust that can be used, together with a hacspec
 standard library, to write succinct, executable, and verifiable specifications in
-Rust. These specifications can be translated into formal languages with hax.
+Rust.
+These specifications can be translated into formal languages with hax.
 
 ![](hax-high-level.png)
 
 # hax
 
-There are a number of Rust verification projects out there. See,
+There are a number of Rust verification projects out there.
+See,
 for example, [Rust
 Verify](https://sites.google.com/view/rustverify2023) and the [Rust Formal Methods Interest Group](https://rust-formal-methods.github.io/).
 While most existing tools try to precisely model the most complex bits the Rust language,
 hax aims to be a usable and pragmatic tool that can analyze the kind of
-code Rust developer write on a daily basis, while abstracting away
-or ignoring Rust features it does not support. 
+code Rust developers write on a daily basis, while abstracting away
+or ignoring Rust features it does not support.
 We believe that it is important in practice to have a usable tool that
 can ingest large Rust crates to show properties on certain parts of
 the code, instead of getting stuck on hard corner cases.
@@ -85,7 +88,7 @@ The hax exporter is not opinionated toward the hax project:
 it can be used as a frontend to the Rust compiler in other projects.
 For example, we are working with the
 [Aeneas](https://github.com/AeneasVerif/aeneas) project
-towads using sharing the exporter code between 
+towards sharing the exporter code between 
 [the two tools](https://github.com/AeneasVerif/aeneas/pull/35).
 
 ## The Engine
@@ -292,9 +295,8 @@ the option being unwrapped is not `None`.
 # Call to Action
 
 hax is still under heavy development and there are many features we
-want to add, and many bugs to squash.  We invite everyone to
-contribute to the project with new backends, contributing to the hax
-frontend or backend, or provide examples to exercise the tool.
+want to add, and many bugs to squash.
+We invite everyone to contribute to the project with new backends, contributing to the hax frontend or backend, or provide examples to exercise the tool.
 
 The F\* backend is currently being developed by the Inria Prosecco
 team, the Coq backend by the Aarhus team, and an EasyCrypt backend is

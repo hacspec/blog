@@ -117,9 +117,12 @@ mutation. Such constraints are ensured statically, reducing
 opportunities for bugs.
 
 This typed phase design allows us to target heterogeneous languages:
-for instance, an upcoming backend targets
-[EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt) which uses an
-imperative style quite different from F\* and Coq.
+for instance, we already support a backend in the imperative language of the [SSProve](https://github.com/SSProve/) Coq library.
+This comes with an [automatic proof](https://eprint.iacr.org/2023/185) that it is equivalent to the functional interpretation.
+This can be seen as a case-by-case correctness proof of hax.
+
+This design can be used as a template for the upcoming backend which targets the imperative language of 
+[EasyCrypt](mhttps://github.com/EasyCrypt/easycrypt).
 
 # Usage
 

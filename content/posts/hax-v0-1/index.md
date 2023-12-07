@@ -1,7 +1,7 @@
 ---
 author: "Franziskus Kiefer & Lucas Franceschino"
 title: "Introducing hax 🎂"
-date: "2023-20-10"
+date: "2023-10-20"
 description: "We are excited to announce the first release of hax"
 tags: ["release", "announcement"]
 ShowToc: true

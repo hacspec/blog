@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hax</title>
-    <link>https://hacspec.github.io/blog/</link>
-    <description>Recent content on hax</description>
+    <title>this-month-in-hax on hax</title>
+    <link>https://hacspec.github.io/blog/tags/this-month-in-hax/</link>
+    <description>Recent content in this-month-in-hax on hax</description>
     <image>
       <title>hax</title>
       <url>https://hacspec.github.io/blog/papermod-cover.png</url>
@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/this-month-in-hax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This month in hax: June 2024</title>
       <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</link>
@@ -22,26 +22,6 @@
 In June, 30 PRs have been merged 🎉! The detail is available below.
 On the Rust side, we have updated the Rust compiler to a very recent nightly thanks to @Nadrieril! We also added support for more Rust features in the frontend (dyn Trait, (more disciminant informations on ADTs)[https://github.</description>
     </item>
-    
-    <item>
-      <title>Announcing the hax tutorial</title>
-      <link>https://hacspec.github.io/blog/posts/announcement-tutorial/</link>
-      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/posts/announcement-tutorial/</guid>
-      <description>We wrote a tutorial for hax!</description>
-    </item>
-    
-    <item>
-      <title>Introducing hax 🎂</title>
-      <link>https://hacspec.github.io/blog/posts/hax-v0-1/</link>
-      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/posts/hax-v0-1/</guid>
-      <description>We are excited to announce the first release of hax</description>
-    </item>
-    
-    
     
   </channel>
 </rss>

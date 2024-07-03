@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>this-month-in-hax</title>
+      <link>https://hacspec.github.io/blog/tags/this-month-in-hax/</link>
+      <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/tags/this-month-in-hax/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>announcement</title>
       <link>https://hacspec.github.io/blog/tags/announcement/</link>

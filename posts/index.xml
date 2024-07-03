@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This month in hax: June 2024</title>
+      <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</link>
+      <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</guid>
+      <description>This first blog post inaugurates our series named &amp;ldquo;This Month in hax&amp;rdquo;: a series of short highlights of what happened in the development of hax and it&amp;rsquo;s ecosystem in the month.
+In June, 30 PRs have been merged 🎉! The detail is available below.
+On the Rust side, we have updated the Rust compiler to a very recent nightly thanks to @Nadrieril! We also added support for more Rust features in the frontend (dyn Trait, (more disciminant informations on ADTs)[https://github.</description>
+    </item>
+    
     <item>
       <title>Announcing the hax tutorial</title>
       <link>https://hacspec.github.io/blog/posts/announcement-tutorial/</link>

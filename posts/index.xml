@@ -20,7 +20,7 @@
       <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</guid>
       <description>This first blog post inaugurates our series named &amp;ldquo;This Month in hax&amp;rdquo;: a series of short highlights of what happened in the development of hax and it&amp;rsquo;s ecosystem in the month.
 In June, 30 PRs have been merged 🎉! The detail is available below.
-On the Rust side, we have updated the Rust compiler to a very recent nightly thanks to @Nadrieril! We also added support for more Rust features in the frontend (dyn Trait, (more disciminant informations on ADTs)[https://github.</description>
+On the Rust side, we have updated the Rust compiler to a very recent nightly thanks to @Nadrieril! We also added support for more Rust features in the frontend (dyn Trait), more disciminant informations on ADTs, fixed various bugs, and improved the general experience of using hax.</description>
     </item>
     
     <item>

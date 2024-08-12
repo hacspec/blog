@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This month in hax: July 2024</title>
+      <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-07/</link>
+      <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-07/</guid>
+      <description>In July, we merged 32 PRs! 🎉
+On the side of the frontend and CLI, we had a lot of fixes and improvements! The hax command line and rustc driver were refactored, allowing for better scaling and caching. We also improved the general ergonomics: diagnostics can now be output in JSON, we have improved error messages&amp;hellip; And we pushed various bug fixes.
+In the engine, we now resugar asserts properly and support dyn.</description>
+    </item>
+    
     <item>
       <title>This month in hax: June 2024</title>
       <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</link>

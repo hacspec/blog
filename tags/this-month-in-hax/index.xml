@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/this-month-in-hax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/this-month-in-hax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This month in hax: September 2024</title>
+      <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-09/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-09/</guid>
+      <description>In July, we merged 33 PRs! 🎉
+On the side of the frontend, Nadrieril and I worked at making hax handling of binders (e.g. &#39;a in for&amp;lt;&#39;a&amp;gt; &amp;amp;&#39;a T: PartialEq&amp;lt;i32&amp;gt;) and traits better. This is not finished yet, but we made great progress. Our goal is to make the frontend work on every valid Rust code.
+In the engine, thanks to paulmure, we now are able to process unsafe blocks. Thanks to maximebuyse, the engine can now rewrite more return expressions: we are now planning on supporting return inside loops, along with break and continue.</description>
+    </item>
+    
     <item>
       <title>This month in hax: July 2024</title>
       <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-07/</link>

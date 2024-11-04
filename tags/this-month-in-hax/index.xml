@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/this-month-in-hax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/this-month-in-hax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This month in hax: October 2024</title>
+      <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-10/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-10/</guid>
+      <description>In October, we merged 70 PRs! 🎉
+Thanks to a huge work from Nadrieril on trait resolution, the goal of handling all valid Rust code with hax frontend is now almost achieved. With these improvements and some bugfixes from W95Psp, we now produce JSON without errors for more than 99% of Rust&amp;rsquo;s top 800 crates!
+W95Psp worked on a new data representation for communication between the frontend and the engine. This removes redundancy and gives great performance gains.</description>
+    </item>
+    
     <item>
       <title>This month in hax: September 2024</title>
       <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-09/</link>

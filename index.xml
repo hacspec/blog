@@ -11,7 +11,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This month in hax: December 2024</title>
+      <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-12/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-12/</guid>
+      <description>This is the last post of this series for 2024.
+During this somewhat brief December, as many take time off for the holidays, we merged 21 PRs.
+The focus this month was largely on bug fixes, improvements, and general cleanups, with most of the work concentrated on the engine. However, a few frontend updates made their way in as well.
+A notable contribution from @maximebuyse introduces more consistent support for marking Rust items as opaque, establishing a unified approach to opaqueness across nearly all types of Rust items.</description>
+    </item>
+    
     <item>
       <title>This month in hax: November 2024</title>
       <link>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-11/</link>

@@ -1,7 +1,8 @@
-baseURL: "https://hacspec.github.io/blog/"
+baseURL: "https://hacspec.org/blog/"
 title: hax
-paginate: 5
 theme: PaperMod
+pagination:
+    pagerSize: 5
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -42,8 +43,8 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "hax & hacspec blog - https://github.com/hacspec/blog"
-    author: hacspec authors
+    description: "hax blog - https://github.com/cryspen/hax"
+    author: hax authors
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
@@ -76,13 +77,13 @@ params:
     homeInfoParams:
         Title: "hax & hacspec"
         Content: >
-            A Rust verification tool
+            <a href="https://hax.cryspen.com/">Find the new hax website at <b>hax.cryspen.com</b></a>
 
     socialIcons:
         - name: github
-          url: "https://github.com/hacspec/hax"
+          url: "https://github.com/cryspen/hax"
         - name: email
-          url: "mailto:hacspec@cryspen.com"
+          url: "mailto:hax@cryspen.com"
 
     # editPost:
     #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"

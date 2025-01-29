@@ -2,51 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on hax</title>
-    <link>https://hacspec.github.io/blog/tags/</link>
+    <link>https://hacspec.org/blog/tags/</link>
     <description>Recent content in Tags on hax</description>
     <image>
       <title>hax</title>
-      <url>https://hacspec.github.io/blog/papermod-cover.png</url>
-      <link>https://hacspec.github.io/blog/papermod-cover.png</link>
+      <url>https://hacspec.org/blog/papermod-cover.png</url>
+      <link>https://hacspec.org/blog/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.141.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hacspec.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hacspec.org/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>this-month-in-hax</title>
-      <link>https://hacspec.github.io/blog/tags/this-month-in-hax/</link>
+      <title>This-Month-in-Hax</title>
+      <link>https://hacspec.org/blog/tags/this-month-in-hax/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/tags/this-month-in-hax/</guid>
+      <guid>https://hacspec.org/blog/tags/this-month-in-hax/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>announcement</title>
-      <link>https://hacspec.github.io/blog/tags/announcement/</link>
+      <title>Announcement</title>
+      <link>https://hacspec.org/blog/tags/announcement/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/tags/announcement/</guid>
+      <guid>https://hacspec.org/blog/tags/announcement/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tutorial</title>
-      <link>https://hacspec.github.io/blog/tags/tutorial/</link>
+      <title>Tutorial</title>
+      <link>https://hacspec.org/blog/tags/tutorial/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/tags/tutorial/</guid>
+      <guid>https://hacspec.org/blog/tags/tutorial/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>release</title>
-      <link>https://hacspec.github.io/blog/tags/release/</link>
+      <title>Release</title>
+      <link>https://hacspec.org/blog/tags/release/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacspec.github.io/blog/tags/release/</guid>
+      <guid>https://hacspec.org/blog/tags/release/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

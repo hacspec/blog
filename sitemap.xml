@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hacspec.github.io/blog/</loc>
+    <loc>https://hacspec.org/blog/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/</loc>
+    <loc>https://hacspec.org/blog/posts/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/tags/</loc>
+    <loc>https://hacspec.org/blog/tags/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-12/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-12/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/tags/this-month-in-hax/</loc>
+    <loc>https://hacspec.org/blog/tags/this-month-in-hax/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-11/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-11/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-10/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-10/</loc>
     <lastmod>2024-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-09/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-09/</loc>
     <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-07/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-07/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/this-month-in-hax/2024-06/</loc>
+    <loc>https://hacspec.org/blog/posts/this-month-in-hax/2024-06/</loc>
     <lastmod>2024-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/tags/announcement/</loc>
+    <loc>https://hacspec.org/blog/tags/announcement/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/announcement-tutorial/</loc>
+    <loc>https://hacspec.org/blog/posts/announcement-tutorial/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/tags/tutorial/</loc>
+    <loc>https://hacspec.org/blog/tags/tutorial/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/posts/hax-v0-1/</loc>
+    <loc>https://hacspec.org/blog/posts/hax-v0-1/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/tags/release/</loc>
+    <loc>https://hacspec.org/blog/tags/release/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hacspec.github.io/blog/archives/</loc>
+    <loc>https://hacspec.org/blog/archives/</loc>
   </url><url>
-    <loc>https://hacspec.github.io/blog/categories/</loc>
+    <loc>https://hacspec.org/blog/categories/</loc>
   </url><url>
-    <loc>https://hacspec.github.io/blog/search/</loc>
+    <loc>https://hacspec.org/blog/search/</loc>
   </url><url>
-    <loc>https://hacspec.github.io/blog/series/</loc>
+    <loc>https://hacspec.org/blog/series/</loc>
   </url>
 </urlset>
